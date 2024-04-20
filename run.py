@@ -39,11 +39,13 @@ def player_options():
     elif result == b:
         print(leader_board)
     elif result == c:
+        """
         give options for the game levels
-    else 
+        """
+    else: 
         print("You need to answer with a,b or c to continue.")            
 
-
+player_options()     
 
 def instrustions ():
     """
@@ -79,3 +81,7 @@ def play_game_three ():
     """
     Playes the hardest level game, providing random questions for all of the times tables from 2-12. 
     """       
+
+
+
+
