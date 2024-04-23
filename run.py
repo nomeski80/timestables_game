@@ -20,9 +20,9 @@ def welcome_player():
     """
     print("Welcome to the timestables game.")
     print("What is your name?")
-    print("Only use letter when typing your name.")
+    print("Only use letters when typing your name.")
 
-    player_name_str = input ("Enter your name here:")
+    player_name_str = input ("Enter your name here:\n ")
 
     print (f"Nice you meet you {player_name_str}")
 
@@ -33,22 +33,25 @@ def player_options():
     """  
     Asks the player what they would like to do next
     """
-    print("Would you like to a) see the instructions for the game or b)see the leader board or c)get straight into the game")
-    options = input ("Type in a, b or c")
-    if result == a:
-        print(f"You picked a for instructions {instructions}") 
-    elif result == b:
-        print(f"You picked b for the leader board {leader_board}")
-    elif result == c:
+    print("Would you like to a) see the instructions for the game or b)see the leader board or c)get straight into the gam \n")
+    options = input("Type in a, b or c\n")
+    if options == "a":
+        print(f"You picked 'a' for instructions.")
+        print("Welcome to the timestable practice game. To play this game you need to select which level you would like to play and then you can race against the clock to try to answer the questions correctly." )
+ 
+    elif options == "b":
+        print(f"You picked 'b' for the leader board")
+    elif options == "c":
         """
         give options for the game levels
         """
-        print(f"You picked to play a game") 
-        if result == 1:
+        print(f"You picked 'c' to play a game. How tricky would you like the questions to be?") 
+        level = input ("Type in 1 for easy, 2 for medium or 3 for the harderst level.\n")
+        if level == "1":
             play_game_one ()
-        elif result == 2:
+        elif level == "2":
             play_game_two ()
-        elif result == 3:
+        elif level == "3":
             play_game_three ()
         else: 
             print("You need to answer with 1,2 or 3 to continue.")            
@@ -56,13 +59,13 @@ def player_options():
         print("You need to answer with a,b or c to continue.")            
 
 player_options()     
-
+"""
 def instrustions ():
     """
     Explains how to play the game to a new player.
     """
     print("Welcome to the timestable practice game. To play this game you need to select which level you would liek to play and thenm you can race against the clock to try to answers the questions correctly." )
-
+"""
 
 def leader_board():
     """
@@ -80,7 +83,8 @@ def leader_board():
 def play_game_one ():   
     """
     Playes the beginner level game, providing random questions for the 2,5 and 10 times tables. 
-    """    
+    """
+        
 
 def play_game_two ():   
     """
