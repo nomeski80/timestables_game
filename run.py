@@ -34,14 +34,24 @@ def player_options():
     Asks the player what they would like to do next
     """
     print("Would you like to a) see the instructions for the game or b)see the leader board or c)get straight into the game")
+    options = input ("Type in a, b or c")
     if result == a:
-        print(instructions) 
+        print(f"You picked a for instructions {instructions}") 
     elif result == b:
-        print(leader_board)
+        print(f"You picked b for the leader board {leader_board}")
     elif result == c:
         """
         give options for the game levels
         """
+        print(f"You picked to play a game") 
+        if result == 1:
+            play_game_one ()
+        elif result == 2:
+            play_game_two ()
+        elif result == 3:
+            play_game_three ()
+        else: 
+            print("You need to answer with 1,2 or 3 to continue.")            
     else: 
         print("You need to answer with a,b or c to continue.")            
 
