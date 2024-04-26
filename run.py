@@ -66,13 +66,13 @@ def player_options():
         print("You need to answer with a,b or c to continue.")            
 
 player_options()     
-"""
+
 def instrustions ():
     """
     Explains how to play the game to a new player.
     """
     print("Welcome to the timestable practice game. To play this game you need to select which level you would liek to play and thenm you can race against the clock to try to answers the questions correctly." )
-"""
+    
 
 def leader_board():
     """
@@ -85,7 +85,7 @@ def leader_board():
 
     print(scores)
 
-
+import random
 
 def play_game_one ():   
     """
