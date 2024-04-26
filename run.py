@@ -12,6 +12,13 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('timestables game')
 
+print ("W   W  EEEEE  L       CCC    OOO   M   M  EEEEE")
+print ("W   W  E      L      C      O   O  MM MM  E    ")
+print ("W   W  E      L      C      O   O  MM MM  E    ")
+print ("W W W  EEEEE  L      C      O   O  M M M  EEEEE")
+print ("WW WW  E      L      C      O   O  M   M  E    ")
+print ("WW WW  E      L      C      O   O  M   M  E    ")
+print ("W   W  EEEEE  LLLLL   CCC    OOO   M   M  EEEEE")
 
 
 def welcome_player():
