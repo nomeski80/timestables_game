@@ -79,7 +79,10 @@ def leader_board():
     Show the player the top 5 scores.
     """
     leader_board = SHEET.worksheet('leader board')
-
+leader_board = []
+leader_board.append(player_name_str)
+leader_board_score = []
+leader_board_score.append(score)
 
     scores = leader_board.get_all_values()
 
@@ -91,18 +94,21 @@ def play_game_one ():
     """
     Playes the beginner level game, providing random questions for the 2,5 and 10 times tables. 
     """
-        
+    game_one = random.randint(0,12)* random.randint(2,5,10)
+    print(game_one)
+
 
 def play_game_two ():   
     """
     Playes the medium level game, providing random questions for the 3,4 and 8 times tables. 
-    """       
+    """
+    game_two = random.randint(0,12)* random.randint(2,3,4,5,6,10)       
 
 def play_game_three ():   
     """
     Playes the hardest level game, providing random questions for all of the times tables from 2-12. 
     """       
-
+    game_three = random.randint(0,12)* random.randint(0,12)   
 
 
 
