@@ -35,7 +35,59 @@ def welcome_player():
 
     print (f"Nice you meet you {player_name_str}")
 
-welcome_player()    
+
+def player_options():
+    """  
+    Asks the player what they would like to do next
+    """
+    print(
+        """Would you like to 
+        a) see the instructions for the game 
+        or 
+        b) see the leader board 
+        or 
+        c) get straight into the game?\n""")
+
+    options = input("Type in a, b or c\n").lower()
+
+    if options == "a":
+        print(f"You picked 'a' for instructions.")
+        print("Welcome to the timestable practice game. To play this game you need to select which level you would like to play and then you can race against the clock to try to answer the questions correctly." )
+        player_options()
+ 
+    elif options == "b":
+        print(f"You picked 'b' for the leader board")
+
+    elif options == "c":
+        """
+        give options for the game levels
+        """
+        print(f"You picked 'c' to play a game. How tricky would you like the questions to be?") 
+        level = input ("Type in 1 for easy, 2 for medium or 3 for the harderst level.\n")
+        if level == "1":
+            play_game("easy")
+        elif level == "2":
+            play_game("medium")
+        elif level == "3":
+            play_game("hard")
+        else:
+            print("You need to answer with 1,2 or 3 to continue.")            
+    else:
+        print("You need to answer with a,b or c to continue.")            
+
+
+def instrustions():
+    """
+    Explains how to play the game to a new player.
+    """
+    print(
+        """Welcome to the timestable practice game.
+     To play this game you need to select which level you would like 
+     to play and then you can race against the clock to try to answers 
+     the questions correctly."""
+      )
+    player_options()
+
 
 def play_game(difficulty):   
     """
@@ -74,57 +126,9 @@ def play_game(difficulty):
     print("\n")
     print("You scored", number_correct)        
 
-        
+    
 
-
-def player_options():
-    """  
-    Asks the player what they would like to do next
-    """
-    print(
-        """Would you like to 
-        a) see the instructions for the game 
-        or 
-        b) see the leader board 
-        or 
-        c) get straight into the game?\n""")
-    options = input("Type in a, b or c\n").lower()
-    if options == "a":
-        print(f"You picked 'a' for instructions.")
-        print("Welcome to the timestable practice game. To play this game you need to select which level you would like to play and then you can race against the clock to try to answer the questions correctly." )
-        player_options()
- 
-    elif options == "b":
-        print(f"You picked 'b' for the leader board")
-    elif options == "c":
-        """
-        give options for the game levels
-        """
-        print(f"You picked 'c' to play a game. How tricky would you like the questions to be?") 
-        level = input ("Type in 1 for easy, 2 for medium or 3 for the harderst level.\n")
-        if level == "1":
-            play_game("easy")
-        elif level == "2":
-            play_game("medium")
-        elif level == "3":
-            play_game("hard")
-        else:
-            print("You need to answer with 1,2 or 3 to continue.")            
-    else:
-        print("You need to answer with a,b or c to continue.")            
-
-player_options()     
-
-def instrustions():
-    """
-    Explains how to play the game to a new player.
-    """
-    print("""Welcome to the timestable practice game.
-     To play this game you need to select which level you would like 
-     to play and then you can race against the clock to try to answers 
-     the questions correctly."""
-      )
-    player_options()
+     
 
 """
 def leader_board():
@@ -143,24 +147,13 @@ def leader_board():
     player_options()
 """
 
+welcome_player()    
+player_options()
 
 
 
 
 
-
-def play_game_two():   
-    """
-    Playes the medium level game, providing random questions for the 3,4 and 8 times tables. 
-    """
-    game_two = random.randint(0,12)* random.randint(2,3,4,5,6,10)  
-         
-
-def play_game_three():   
-    """
-    Playes the hardest level game, providing random questions for all of the times tables from 2-12. 
-    """       
-    game_three = random.randint(0,12)* random.randint(0,12)   
 
 
 
