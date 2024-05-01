@@ -26,7 +26,7 @@ print ("W   W  EEEEE  LLLLL   CCC    OOO   M   M  EEEEE")
 
 def welcome_player():
     """
-    Welcomes player to game and gets their name.
+    Displays a welcome message and askes the player for their name. 
     """
     print("\n")
     print("Welcome to the timestables game.")
@@ -36,8 +36,9 @@ def welcome_player():
 
 def player_options():
     """  
-    Asks the player what they would like to do.
+   Provides the player with options to select what they would like to do with the game.
     """
+
     print(
         """Would you like to 
         a) see the instructions for the game 
@@ -77,15 +78,18 @@ def player_options():
 
 def instrustions():
     """
-    Explains how to play the game to a new player.
+    Explains how to play the game to a new player. The code to create multiline strngs comes from Stack overflow, cited in the ReadMe file
     """
     print(
-        """Welcome to the timestable practice game.
-     To play this game you need to select which level you would like 
-     to play and then you can race against the clock to try to answers 
-     the questions correctly."""
-      )
-    player_options()
+    """
+    Welcome to the timestable practice game.
+    To play this game you need to select which level you would like 
+    to play try to answers the questions correctly. 
+    Level 1 = easy: will test your 2,5 ad 10 timestables.
+    Level 2 = medium: will test your 2,3,4,5,6, and 10 timestables
+    Level 3 = Tricky: will lest all of yur times tables up to the 12 timestables!
+    """)
+    player_options() 
 
 
 def play_game(difficulty):   
@@ -123,7 +127,12 @@ def play_game(difficulty):
             number_correct = number_correct+ 1
     #add in input validation here to check answers are int and to provide user feedback if not        
     print("\n")
-    print("You scored", number_correct)
+    print("You scored", number_correct ,)
+    print("Would  you like to play again or exit the game? Y to play again, N to exit.")
+    play_exit =(input())
+    if play_exit == y:
+         player_options()
+    else: print("Thank you for playing! I hope you enjoyed the game.")    
     #I still need to find a way to send the name and score to worksheets
 
 def leader_board():
