@@ -1,19 +1,16 @@
-import gspread
+
+import os 
 from random import randint
-from google.oauth2.service_account import Credentials
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
 
 
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('timestables game')
 player_name_str = ""
 number_correct = []
+
+def clear_terminal():
+    """
+    The clear terminal function has been added to keep the turminal tidy and easier to read. 
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 # add in a clear screen function
 # take out the google sheets info
@@ -59,7 +56,7 @@ def instrustions():
     Level 1 = easy: will test your 2,5 ad 10 timestables.
     Level 2 = medium: will test your 2,3,4,5,6, and 10 timestables
     Level 3 = Tricky: will test all of your
-    times tables up to the12 timestables!
+    times tables up to the 12 timestables!
     """)
     player_options()
 
@@ -74,32 +71,31 @@ def player_options():
         """Would you like to
         a) see the instructions for the game
         or
-        b) see the leader board
-        or
-        c) get straight into the game?\n""")
+        b) get straight into the game?\n""")
     while True:
-        options = input("Type in a, b or c...\n").lower()
+        options = input("Type in a or b...\n").lower()
 
         if options == "a":
+            clear_terminal()
             print(f"You picked 'a' for instructions.")
             instrustions()
             player_options()
 
+       
         elif options == "b":
-            print(f"You picked 'b' for the leader board")
-            leader_board()
-
-        elif options == "c":
             """
             give options for the game levels
             """
+            clear_terminal()
             print(
-                """You picked 'c' to play a game. How tricky would you
+                """You picked 'b' to play a game. How tricky would you
                 like the questions to be?\n""")
             while True:
                 level = input(
-                    """Type in 1 for easy, 2 for medium or 3
-                    for the harderst level.\n""")
+                    """Type in 
+                    1 for easy,
+                    2 for medium or
+                    3 for the harderst level.\n""")
 
                 if level == "1":
                     play_game("easy")
@@ -112,7 +108,7 @@ def player_options():
                         """Invalid choice. You need to answer with
                         1,2 or 3 to continue.\n""")
     else:
-        print("You need to answer with a,b or c to continue.")
+        print("You need to answer with a or b to continue.")
 
 
 def play_game(difficulty):
@@ -161,18 +157,33 @@ def play_game(difficulty):
                 break
 
     print("\n")
+    clear_terminal()
     print("You scored", number_correct,)
-    print(
-        """Would  you like to play again or exit the game?
-        Y to play again, N to exit.\n""")
-    play_exit = (input())
-    if play_exit == ("y"):
-        player_options()
-    else:
-        print("Thank you for playing! I hope you enjoyed the game.")
+    player_restart()
 
-
+def player_restart():
+    """
+    player_restart function is to give the player 
+    an option to play again or to exit the game.
+    """    
+    while True:
+        player_restart = input("\n Would  you like to play again "
+                                "or exit the game? "
+                                " Please answer Y/N\n") 
+        if player_restart.lower() == "y":
+            player_options()
+            break
+        elif player_restart.lower() == "n":
+            clear_terminal()
+            print("Thank you for playing! I hope you enjoyed the game.")
+            break
+        else:
+            print(
+                """Invalid choice. You need to answer with
+                y or n to continue.\n""")
+            
 welcome_player()
 player_options()
 play_game()
 instructions()
+player_restart()
