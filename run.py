@@ -15,6 +15,9 @@ SHEET = GSPREAD_CLIENT.open('timestables game')
 player_name_str=""
 number_correct=[]
 
+#add in a clear screen function 
+#take out the google sheets info
+
 print ("W   W  EEEEE  L       CCC    OOO   M   M  EEEEE")
 print ("W   W  E      L      C      O   O  MM MM  E    ")
 print ("W   W  E      L      C      O   O  MM MM  E    ")
@@ -33,6 +36,20 @@ def welcome_player():
     player_name_str = input("Enter your name here:\n ")
     print (f"Nice you meet you {player_name_str}")
 
+def instrustions():
+    """
+    Explains how to play the game to a new player. The code to create multiline strngs comes from Stack overflow, cited in the ReadMe file
+    """
+    print(
+    """
+    Welcome to the timestable practice game.
+    To play this game you need to select which level you would like 
+    to play try to answers the questions correctly. 
+    Level 1 = easy: will test your 2,5 ad 10 timestables.
+    Level 2 = medium: will test your 2,3,4,5,6, and 10 timestables
+    Level 3 = Tricky: will lest all of yur times tables up to the 12 timestables!
+    """)
+    player_options() 
 
 def player_options():
     """  
@@ -47,11 +64,11 @@ def player_options():
         or 
         c) get straight into the game?\n""")
 
-    options = input("Type in a, b or c\n").lower()
+    options = input("Type in a, b or c...\n").lower()
 
     if options == "a":
         print(f"You picked 'a' for instructions.")
-        print("Welcome to the timestable practice game. To play this game you need to select which level you would like to play and then you can race against the clock to try to answer the questions correctly." )
+        instrustions()
         player_options()
  
     elif options == "b":
@@ -73,28 +90,18 @@ def player_options():
         else:
             print("You need to answer with 1,2 or 3 to continue.")            
     else:
-        print("You need to answer with a,b or c to continue.")            
+        print("You need to answer with a,b or c to continue.")    
+        #program breaks here... need to add input validation into a loop to make it return to options. 
+                
 #if possible add option to add a timer giving player 5 sec to answer questions, or time how long it takes to answer all
 
-def instrustions():
-    """
-    Explains how to play the game to a new player. The code to create multiline strngs comes from Stack overflow, cited in the ReadMe file
-    """
-    print(
-    """
-    Welcome to the timestable practice game.
-    To play this game you need to select which level you would like 
-    to play try to answers the questions correctly. 
-    Level 1 = easy: will test your 2,5 ad 10 timestables.
-    Level 2 = medium: will test your 2,3,4,5,6, and 10 timestables
-    Level 3 = Tricky: will lest all of yur times tables up to the 12 timestables!
-    """)
-    player_options() 
+
 
 
 def play_game(difficulty):   
     """
-    Playes the game, providing random questions for the times tables. 
+    Playes the game, providing random questions for the times tables. Checks that the valued inputted is an int
+    if not t will reply with a message to say you have not entered a number, please try again.  
     """
     num_questions = 10
 
@@ -124,17 +131,25 @@ def play_game(difficulty):
         print("How much is", rand_values_x[z], "*", rand_values_y[z], end = "")   
         test_quest = int(input(" What is your answer?"))
         if answer == test_quest:
-            number_correct = number_correct+ 1
-    #add in input validation here to check answers are int and to provide user feedback if not        
+            number_correct = number_correct+ 1    
+        #while True:
+         #   try:
+          #    test_quest = int(input(" What is your answer?"))
+        #except ValueError:
+         #  print("Not a number, please try again.")   
+          #add in input validation here to check answers are int and to provide user feedback if not        
     print("\n")
     print("You scored", number_correct ,)
     print("Would  you like to play again or exit the game? Y to play again, N to exit.")
     play_exit =(input())
-    if play_exit == y:
+    if play_exit == ("y"):
          player_options()
     else: print("Thank you for playing! I hope you enjoyed the game.")    
     #I still need to find a way to send the name and score to worksheets
 
+
+
+#either delete this altogether or add another internal file to add and retrieve data. 
 def leader_board():
     """   
     Show the player the top 5 scores.
