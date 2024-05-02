@@ -9,6 +9,7 @@ number_correct = []
 def clear_terminal():
     """
     The clear terminal function has been added to keep the turminal tidy and easier to read. 
+    code for this function was found in slack overflow. cited in the README file
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -146,7 +147,7 @@ def play_game(difficulty):
         print("\n")
         print("How much is", rand_values_x[z], "*", rand_values_y[z], end="")
         while True:
-            test_quest = input(" What is your answer?")
+            test_quest = input(" What is your answer?\n")
             if not test_quest.isdigit():
                 print("Not a number, please try again.")
             elif answer == int(test_quest):
