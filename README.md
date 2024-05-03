@@ -54,16 +54,17 @@ Variable were placed inside functions so I could not acces them when they were c
 I had mistakenly added some spaces after I had defined my functions but before the perenthasis this meant my functions did not work. 
 
 The input validation was not working when I first tried it.
-I reviewed the lesson on CI about Python Exception Errors. I added in a while true and except formula but when I did the console threw back a syntax error. I adjusted the excpect to go above the 'if' statement but then all ten mulitplication questions came up at once and the input of answers no longer matched the questions. ADD IMAGE. 
-I removed the try and except on the validation and used while true: and if statements and these appears to be working. this works for the a/b choices and well as the 1/2/3 options. 
+I reviewed the lesson on CI about Python Exception Errors. I added in a while true and except formula but when I did the console threw back a syntax error. I adjusted the excpect to go above the 'if' statement but then all ten mulitplication questions came up at once and the input of answers no longer matched the questions. 
 
+I removed the try and except on the validation and used while true: and if statements and these appears to be working. this works for the a/b choices and well as the 1/2/3 options. 
+![validation error](images/validationbug.png). 
 On the exit message I have been having trouble getting the program to end. It keep offering more choices to play. At first I had placed the otions to exit or play again within the play_game functions. Then I decided to create a new function.  
 
 I also had trouble trying to call functions before they had been defined in the order of the program. For example I had provided the player with function to view the options to view instructions or to play the game, but then after that defined the instructions function, so I was not able to call it. I resolved this by cut and pasting the instructions code and placing it above the player_options. 
-
+![not defined screenshot](images/notdefined.png)
 On the exit message "Would you like to play again or exit the game?" I had forgotten to insert the 'y' into a string so I was unable to call the player_options functions. This was quickly fixed by adding (" ") allowing the game to have a smooter finish. Also, when the no option was selected it would send up a thank you goodbye message but then go on to return into the game and offer options for game level. I found the exit() fnction on [free code camp](https://www.freecodecamp.org/news/python-end-program-how-to-exit-a-python-program-in-terminal/#:~:text=Alternatively%2C%20you%20can%20use%20the,and%20Ctrl%20%2B%20D%20in%20macOS.) and this was a simple fix. 
 
-## unfixed bugsNone found
+## unfixed bugs - None found
 
 ## Deployment
 [Heroku](https://times-tables-game-ce579d4de65e.herokuapp.com/~)
@@ -73,7 +74,7 @@ On the exit message "Would you like to play again or exit the game?" I had forgo
 * I found out how to print on multiple lines by using [Slack Overflow](https://stackoverflow.com/questions/34980251/how-to-print-multiple-lines-of-text-with-python)
 * How to clear the terminal code and instructions came from [Slack Overflow](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python)
 * Structure for this README doc was taken from [Git Hub readme-examples](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md#user-experience-ux)
-* I  would also like to give thans and credit to my mentor Graeme Taylor for his ongoing and continued support and guidance throughout all of my projects. 
+* I  would also like to give thanks and give credit to my mentor Graeme Taylor for his ongoing and continued support and guidance throughout all of my projects. 
 
 ## What went well, and what I'm still not happy with
 I had lots of grand ideas at the begning of the project as you can see from the flow chart . However, I had to end up scaling down the features of the application due to my current skills and understanding of Python and the amount of time I had left myself to complete the project. 
