@@ -3,14 +3,14 @@
 # Times tables practice game
 ## Welcome to milestone Project 3
 
-[Welcome page](images/amiresponsive.png)
+![Welcome page](images/am-i-responsive.png)
 
 This is my third project for the Code Institute full stack developer course. I have created a command-line application allowing users to practice their mulitplication tables in preparation for the [Year 4 national multiplication tests](https://www.gov.uk/government/collections/multiplication-tables-check). The application gives the user options as to which level of difficulty they would like to try and then generates random multiplication questions. The user should try to answer the questions as quickly as possible. 
  
 ## Homepage
 Game can be played here:
 [In application game on Heroku](https://times-tables-game-ce579d4de65e.herokuapp.com/)
-[welcome page](images/welcome.png)
+![welcome page](images/welcome.png)
 ## User Experiences(UX)
 
 # A student user's point of view
@@ -26,7 +26,7 @@ Instructions for the game are clear and simple. Teachers will be able to monitor
 ## Lucid Flow charts
 When planning out the site I used a mixture of Google slides [planning flowchart on Lucid](https://lucid.app/lucidchart/d10182aa-ba39-42a5-b35a-7cccb7152c44/edit?invitationId=inv_387de66f-fc68-4733-9822-e6e0b774ea69) the flow charts of Lucid helped me to plan out the application and to understand the functions I would need and how they link together. 
 
-[Flow Chart](images/flowchart.png)
+![Flow Chart](images/flowchart.png)
 
 ## Features
 * Welcome message for the user to input their name
@@ -46,7 +46,7 @@ GitHub, Git pod, Lucid Chart, CI Python linter and heroku for deploymet
 
 ## Validator testing
 Checks the code through CI Python linter
-[Python checker](images/ci-python-linter.png)
+![Python checker](images/ci-python-linter.png)
 
 ## Bugs
 Variable were placed inside functions so I could not acces them when they were called in another part of the appication. Once I moved them to the top of the appication so they could become global variables then they could be used elsewhere in the program. 
@@ -67,7 +67,7 @@ On the exit message "Would you like to play again or exit the game?" I had forgo
 
 ## Deployment
 [Heroku](https://times-tables-game-ce579d4de65e.herokuapp.com/~)
-[Heroku dashboard](images/Heroku-deployment.png)
+![Heroku dashboard](images/Heroku-deployment.png)
 
 # Credits
 * I found out how to print on multiple lines by using [Slack Overflow](https://stackoverflow.com/questions/34980251/how-to-print-multiple-lines-of-text-with-python)
