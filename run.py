@@ -1,20 +1,24 @@
 
-import os 
+import os
 from random import randint
 
 
 player_name_str = ""
 number_correct = []
 
+
 def clear_terminal():
     """
-    The clear terminal function has been added to keep the turminal tidy and easier to read. 
-    code for this function was found in slack overflow. cited in the README file
+    The clear terminal function has been added to keep the turminal tidy and
+    easier to read.
+    code for this function was found in slack overflow. cited in the
+    README file
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # add in a clear screen function
 # take out the google sheets info
+
 
 print("W   W  EEEEE  L       CCC    OOO   M   M  EEEEE")
 print("W   W  E      L      C      O   O  MM MM  E    ")
@@ -82,7 +86,6 @@ def player_options():
             instrustions()
             player_options()
 
-       
         elif options == "b":
             """
             give options for the game levels
@@ -93,7 +96,7 @@ def player_options():
                 like the questions to be?\n""")
             while True:
                 level = input(
-                    """Type in 
+                    """Type in
                     1 for easy,
                     2 for medium or
                     3 for the harderst level.\n""")
@@ -114,7 +117,7 @@ def player_options():
 
 def play_game(difficulty):
     """
-    Playes the game, providing random questions for the times tables.
+    Plays the game, providing random questions for the times tables.
     Checks that the valued inputted is an int
     if not t will reply with a message to say you have not entered a number,
     please try again.
@@ -162,27 +165,29 @@ def play_game(difficulty):
     print("You scored", number_correct,)
     player_restart()
 
+
 def player_restart():
     """
-    player_restart function is to give the player 
+    player_restart function is to give the player
     an option to play again or to exit the game.
-    """    
+    """
     while True:
         player_restart = input("\n Would  you like to play again "
-                                "or exit the game? "
-                                " Please answer Y/N\n") 
+                               "or exit the game? "
+                               " Please answer Y/N\n")
         if player_restart.lower() == "y":
             player_options()
             break
         elif player_restart.lower() == "n":
             clear_terminal()
             print("Thank you for playing! I hope you enjoyed the game.")
-            break
+            exit()
         else:
             print(
                 """Invalid choice. You need to answer with
                 y or n to continue.\n""")
-            
+
+
 welcome_player()
 player_options()
 play_game()
