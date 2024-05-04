@@ -1,4 +1,4 @@
-![I logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
 
 # Times tables practice game
 ## Welcome to milestone Project 3
@@ -59,6 +59,28 @@ to validate my code.
 Checks the code through CI Python linter
 ![Python checker](images/ci-python-linter.png)
 
+## Internal testing
+**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+welcome page to start|user to see welcome as they open the applicatio|ran program|welcome message shows|Pass
+user to input name|name to display with a Nice to meet you text.|input name|message displayed as expected|Pass
+Validation for name input |prompt to use only letters to appear|tested with int, space, special characters and no entry|prompt to re-enter using letters appears.|Pass
+options for instructions or game|two choices to appear with an input box|ran program and entered name, awaited next step|options did appear with input prompt|Pass
+Validation for options input |only to allow a or b|tested with int, space, special characters and no entry|prompt to re-enter using only a or b appears.|Pass
+Instructions displayed|clear instructions on how to play and next steps to display|selected option a|instructions displayed as expected|Pass
+Return to option to play or view instructions|two choices to appear with an input box|continued after instructions|options did appear with input prompt|Pass
+play game to offer difficulty options|three possible difficulty levels to display|selected option b|3 options displayed and explained|Pass
+validation for difficulty input|prompt to only use number 1,2 or 3 if incorrect input|tested with letters, space, special characters and no entry|prompt ro re-enter using either 1,2 or 3 appears|Pass
+app to generate level approperate questions|questions and input to appear for user to answer question|selected each level and tested questions randomness and approperate multiplication level|questions did appear random and at the correct level|Pass
+validation for numeric answer|only to accept int for answer input|tested with letters, space, special characters and no entry|prompt to re-enter using only numeric answer appears|Pass
+check if answer is correct and feedback to user|correct or incorrect answer to appear after each question|entered some correct and some incorrect answers|feedback to user was accurate|Pass
+Does the app provide 10 questions|ten questions to generate|ran through game and counted|ten  different questions do generate|Pass
+total score to display after each round|score messge to appear|completed game using both correct and incorrect answers|correct score displays|Pass
+option to replay or exit|after completing the ten questions user is given the option to replay or exit|completed game using both correct and incorrect answers|options displayed|Pass
+options to replay or exit function correctly|to link to play game again or to exit game|tested both a and b|option return to difficulity options again, option b displays exit message and ends program|Pass
+validation check on exit input|only allow Y/N|tested with other letters, space, int and specal characters|prompt for correct input Y/N given|Pass
+Exit message|Exit message displayed and application stops|N selected|exit message displayed and program stops|Pass
+
 ## Bugs
 Variable were placed inside functions so I could not acces them when they were called in another part of the appication. Once I moved them to the top of the appication so they could become global variables then they could be used elsewhere in the program. 
 
@@ -73,6 +95,7 @@ On the exit message I have been having trouble getting the program to end. It ke
 
 I also had trouble trying to call functions before they had been defined in the order of the program. For example I had provided the player with function to view the options to view instructions or to play the game, but then after that defined the instructions function, so I was not able to call it. I resolved this by cut and pasting the instructions code and placing it above the player_options. 
 ![not defined screenshot](images/notdefined.png)
+
 On the exit message "Would you like to play again or exit the game?" I had forgotten to insert the 'y' into a string so I was unable to call the player_options functions. This was quickly fixed by adding (" ") allowing the game to have a smooter finish. Also, when the no option was selected it would send up a thank you goodbye message but then go on to return into the game and offer options for game level. I found the exit() fnction on [free code camp](https://www.freecodecamp.org/news/python-end-program-how-to-exit-a-python-program-in-terminal/#:~:text=Alternatively%2C%20you%20can%20use%20the,and%20Ctrl%20%2B%20D%20in%20macOS.) and this was a simple fix. 
 
 ## unfixed bugs - None found
@@ -83,7 +106,7 @@ On the exit message "Would you like to play again or exit the game?" I had forgo
 The site is deployed using GitHub Pages - [timestables_game](https://times-tables-game-ce579d4de65e.herokuapp.com/~)
 
 To Deploy the site using GitHub Pages:
-[Git hub repository](images/github.png)
+![Git hub repository](images/github.png)
 
 Login (or signup) to Github.
 Go to the repository for this project, [nomeski80/timestables_game](https://github.com/nomeski80/timestables_game)
