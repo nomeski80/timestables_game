@@ -52,7 +52,9 @@ When planning out the site I used a mixture of Google slides [planning flowchart
 * [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
 to validate my code.
 * [Lucidchart](https://lucid.co/)
-  This technology was used to create my logic map for the project.
+   used to create my logic map for the project.
+ * [Markdown table generator](https://jakebathman.github.io/Markdown-Table-Generator/)
+   used to generate a clear table of the funtions that were tested in a deployed application
 
 
 ## Validator testing
