@@ -41,7 +41,18 @@ When planning out the site I used a mixture of Google slides [planning flowchart
 
 
 # Technologies Used
-GitHub, Git pod, Lucid Chart, CI Python linter and heroku for deploymet 
+* [Python](https://www.python.org/)
+   to create the entire project.
+* [GitHub](https://github.com/)
+   to securely store my code.
+* [Heroku](https://www.heroku.com/home?)
+  to deploy my application project.
+* [Git pod](https://www.gitpod.io/)
+  as my coding development environment.
+* [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+to validate my code.
+* [Lucidchart](https://lucid.co/)
+  This technology was used to create my logic map for the project.
 
 
 ## Validator testing
@@ -67,14 +78,43 @@ On the exit message "Would you like to play again or exit the game?" I had forgo
 ## unfixed bugs - None found
 
 ## Deployment
-[Heroku](https://times-tables-game-ce579d4de65e.herokuapp.com/~)
+[Heroku]
 ![Heroku dashboard](images/Heroku-deployment.png)
+The site is deployed using GitHub Pages - [timestables_game](https://times-tables-game-ce579d4de65e.herokuapp.com/~)
+
+To Deploy the site using GitHub Pages:
+
+Login (or signup) to Github.
+Go to the repository for this project, [nomeski80/timestables_game](https://github.com/nomeski80/timestables_game)
+Click the settings button.
+Select pages in the left hand navigation menu.
+From the source dropdown select main branch and press save.
+The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [nomeski80/timestables_game](https://github.com/nomeski80/timestables_game)
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project,[nomeski80/timestables_game](https://github.com/nomeski80/timestables_game)
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 # Credits
 * I found out how to print on multiple lines by using [Slack Overflow](https://stackoverflow.com/questions/34980251/how-to-print-multiple-lines-of-text-with-python)
 * How to clear the terminal code and instructions came from [Slack Overflow](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python)
 * Structure for this README doc was taken from [Git Hub readme-examples](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md#user-experience-ux)
 * I  would also like to give thanks and give credit to my mentor Graeme Taylor for his ongoing and continued support and guidance throughout all of my projects. 
+* Instructions for deployment section for this README were taken from an example project by  [kera-cudmore/TheQuizArms](https://github.com/kera-cudmore/TheQuizArms)
 
 ## What went well, and what I'm still not happy with
 I had lots of grand ideas at the begning of the project as you can see from the flow chart . However, I had to end up scaling down the features of the application due to my current skills and understanding of Python and the amount of time I had left myself to complete the project. 
