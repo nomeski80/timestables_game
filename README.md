@@ -83,6 +83,7 @@ On the exit message "Would you like to play again or exit the game?" I had forgo
 The site is deployed using GitHub Pages - [timestables_game](https://times-tables-game-ce579d4de65e.herokuapp.com/~)
 
 To Deploy the site using GitHub Pages:
+[Git hub repository](images/github.png)
 
 Login (or signup) to Github.
 Go to the repository for this project, [nomeski80/timestables_game](https://github.com/nomeski80/timestables_game)
